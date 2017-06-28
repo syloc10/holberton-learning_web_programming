@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-body {
-    background-color: red;
+#white_on_red{
+  background-color: red;
+    color: white;
 }
-
-p {
-	color: white;
-    text-align: left;
-    font-family: verdana;
-    font-size: 20px;
-}
-</style>
-</head>
-<body>
-
-
-<p>White writing on a red background.</p>
-
-</body>
-</html>
