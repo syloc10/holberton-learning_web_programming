@@ -2,4 +2,4 @@
 var my_parameter = process.argv[2];
 
 // Print the my_parameter variable
-console.log(my_parameter)
+console.log("Here is the first passed parameter: " + my_parameter)
