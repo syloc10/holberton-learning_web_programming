@@ -7,13 +7,72 @@
 
 <body>
 
-<img src="https://s-media-cache-ak0.pinimg.com/736x/8d/70/a8/8d70a81fccb3fb12d4c86181019bdf67--logo-type-logo-s.jpg" height="30" width="40" </img>
+
 <nav class="w3-bar w3-yellow">
   <a href="#home" class="w3-button w3-bar-item">Home</a>
   <a href="#Pop" class="w3-button w3-bar-item">Pop</a>
   <a href="#Rap" class="w3-button w3-bar-item">Rap</a>
   <a href="#band" class="w3-button w3-bar-item">About</a>
-</nav>
+</nav
+
+
+<style>
+input[type=text] {
+    width: 330px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+</style>
+</head>
+<body>
+
+<form>
+  <input type="text" name="search" placeholder="Search..">
+</form>
+
+
+
+<section>
+  <img class="mySlides" src="http://www.desicomments.com/wp-content/uploads/2017/04/Music-image.jpg"
+  style="height:400px;width:100%">
+  <img class="mySlides" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv2TaXOkDC_OUtl7J6Vt0IjuxILKqWTOZ2sEs48xbUsnLyuyiOQA"
+  style="height:400px;width:100%">
+  <img class="mySlides" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzI5QiZWhQKbZWoAC6NJuIpjZs9fooIAei5N86pguqYO9hyvsQPQ"
+  style="height:400px;width:100%">
+</section>
+
+  <script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
+</script>
+
+
 
 
 
