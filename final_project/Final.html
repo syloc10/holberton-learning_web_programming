@@ -8,45 +8,103 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<style>{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+    height: 50%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 0%;
+    width: 0%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #ff0000;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #fff000;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+</style>
+</head>
 <body>
 
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">Pop</a>
+    <a href="#">Rap</a>
+    <a href="#">About</a>
+    </div>
+</div>
 
-<nav class="w3-bar w3-white">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+
+<script>
+function openNav() {
+    document.getElementById("myNav").style.width = "20%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+
+
+
+
+
+
+
+
+<nav class="w3-bar w3-red">
   <a href="#home" class="w3-button w3-bar-item">Home</a>
   <a href="#Pop" class="w3-button w3-bar-item">Pop</a>
   <a href="#Rap" class="w3-button w3-bar-item">Rap</a>
   <a href="#band" class="w3-button w3-bar-item">About</a>
-  <head>
-  <style>
-  .container {
-      display: inline-block;
-      cursor: pointer;
-  }
-
-  .bar1, .bar2, .bar3 {
-      width: 35px;
-      height: 5px;
-      background-color: #333;
-      margin: 6px 0;
-      transition: 0.4s;
-  }
-
-  </style>
-  </head>
-  <body>
-
-
-  <div class="container" onclick="myFunction(this)">
-    <div class="bar1"></div>
-    <div class="bar2"></div>
-    <div class="bar3"></div>
-  </div>
-
-
 </nav
 
 <head>
-  <div class="container">
+  
 <style>
 input[type=text] {
     width: 100%;
