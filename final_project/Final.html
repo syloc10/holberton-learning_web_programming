@@ -4,19 +4,50 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <body>
 
 
-<nav class="w3-bar w3-yellow">
+<nav class="w3-bar w3-white">
   <a href="#home" class="w3-button w3-bar-item">Home</a>
   <a href="#Pop" class="w3-button w3-bar-item">Pop</a>
   <a href="#Rap" class="w3-button w3-bar-item">Rap</a>
   <a href="#band" class="w3-button w3-bar-item">About</a>
+  <head>
+  <style>
+  .container {
+      display: inline-block;
+      cursor: pointer;
+  }
+
+  .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: #333;
+      margin: 6px 0;
+      transition: 0.4s;
+  }
+
+  </style>
+  </head>
+  <body>
+
+
+  <div class="container" onclick="myFunction(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+
+
 </nav
 
-
-<style
+<head>
+  <div class="container">
+<style>
 input[type=text] {
     width: 100%;
     box-sizing: border-box;
@@ -37,23 +68,53 @@ input[type=text]:focus {
 }
 </style>
 </head>
-<body>
 
 <form>
   <input type="text" name="search" placeholder="Search..">
 </form>
+</div>
 
 
 
-<section>
+
+
+<div class="w3-content w3-display-container">
   <img class="mySlides" src="http://www.desicomments.com/wp-content/uploads/2017/04/Music-image.jpg"
-  style="height:400px;width:100%">
+  style="height:500px;width:100%">
   <img class="mySlides" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv2TaXOkDC_OUtl7J6Vt0IjuxILKqWTOZ2sEs48xbUsnLyuyiOQA"
-  style="height:400px;width:100%">
-  <img class="mySlides" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzI5QiZWhQKbZWoAC6NJuIpjZs9fooIAei5N86pguqYO9hyvsQPQ"
-  style="height:400px;width:100%">
-</section>
+  style="height:500px;width:100%">
+  <img class="mySlides" src="https://i.ytimg.com/vi/dhviMuktFdA/maxresdefault.jpg"
+  style="height:500px;width:100%">
 
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  </div>
+
+<!-- Change the image of the arow  -->
+  <script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+  }
+  </script>
+
+
+
+
+<!-- Change every 3 second  -->
   <script>
 // Automatic Slideshow - change image every 3 seconds
 var myIndex = 0;
