@@ -5,13 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
  <body>
+
    <!-- Home Bar  -->
    <nav class="w3-bar w3-red">
+     <span style="font-size:25px;cursor:pointer"onclick="openNav()">&#9776;</span>
     <a href="#home" class="w3-button w3-bar-item">Home</a>
     <a href="#Pop" class="w3-button w3-bar-item">Pop</a>
     <a href="#Rap" class="w3-button w3-bar-item">Rap</a>
@@ -73,9 +76,6 @@
       }
     }
     </style>
-
-    <body>
-
     <div id="myNav" class="overlay">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <div class="overlay-content">
@@ -84,8 +84,6 @@
         <a href="#">About</a>
         </div>
     </div>
-
-    <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; </span>
 
     <script>
     function openNav() {
@@ -96,19 +94,11 @@
         document.getElementById("myNav").style.width = "0%";
     }
     </script>
-
-    </nav
-
+  </nav>
 
 
-
-
-
-
-
-
+<!-- Search... Bar  -->
 <head>
-
 <style>
 input[type=text] {
     width: 100%;
@@ -137,11 +127,8 @@ input[type=text]:focus {
 </div>
 
 
-
-
-
-
-<div class="w3-bar w3-black w3-display_container">
+<!-- Background Image -->
+<div class="container">
   <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/originals/f4/e1/06/f4e1064f2f2f06e9c5f71fef985a2281.jpg"
   style="height:100%;width:100%">
   <img class="mySlides" src="https://i.ytimg.com/vi/s4spqOY6Rfc/maxresdefault.jpg"
@@ -149,11 +136,13 @@ input[type=text]:focus {
   <img class="mySlides" src="https://i.ytimg.com/vi/dhviMuktFdA/maxresdefault.jpg"
   style="height:100%;width:100%">
 
-  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-  </div>
+  <!-- Here is arrow button  -->
+  <button class="w3-button w3-red w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-red w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+      </div>
 
-<!-- Change the image of the arow  -->
+
+  <!-- Make the arow working to change the image  -->
   <script>
   var slideIndex = 1;
   showDivs(slideIndex);
@@ -175,30 +164,26 @@ input[type=text]:focus {
   </script>
 
 
-
-
 <!-- Change every 3 second  -->
-  <script>
-// Automatic Slideshow - change image every 3 seconds
-var myIndex = 0;
-carousel();
+<script>
+  var myIndex = 0;
+  carousel();
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}
-    x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 3000);
-}
+  function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 3000);
+  }
 </script>
 
 
-
-
+<!-- Picture with text and Video -->
  <div class="container marketing">
    <hr class="featurette-divider">
 
@@ -215,8 +200,8 @@ function carousel() {
               <div class="container">
                <iframe width="300" height="150" src="https://www.youtube.com/embed/FN7ALfpGxiI" frameborder="0" allowfullscreen></iframe>
                <iframe width="300" height="150" src="https://www.youtube.com/embed/Llw9Q6akRo4" frameborder="0" allowfullscreen></iframe>
-               <iframe width="300" height="150" src="https://www.youtube.com/embed/PMivT7MJ41M" frameborder="0" allowfullscreen></iframe>
-               <iframe width="300" height="150" src="https://www.youtube.com/embed/PT2_F-1esPk" frameborder="0" allowfullscreen></iframe>
+               <iframe width="300" height="150" src="https://www.youtube.com/embed/qGRU3sRbaYw" frameborder="0" allowfullscreen></iframe>
+               <iframe width="300" height="150" src="https://www.youtube.com/embed/8g5iIG2VvnQ" frameborder="0" allowfullscreen></iframe>
           </div>
 
 
@@ -232,14 +217,28 @@ function carousel() {
 
                   <div class="row">
                        <div class="container">
-                        <iframe width="300" height="150" src="https://www.youtube.com/embed/FN7ALfpGxiI" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="300" height="150" src="https://www.youtube.com/embed/xqY59FOcUy8" frameborder="0" allowfullscreen></iframe>
                         <iframe width="300" height="150" src="https://www.youtube.com/embed/Llw9Q6akRo4" frameborder="0" allowfullscreen></iframe>
-                        <iframe width="300" height="150" src="https://www.youtube.com/embed/PMivT7MJ41M" frameborder="0" allowfullscreen></iframe>
-                        <iframe width="300" height="150" src="https://www.youtube.com/embed/PT2_F-1esPk" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="300" height="150" src="https://www.youtube.com/embed/o0GYK5Whk80" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="300" height="150" src="https://www.youtube.com/embed/X7sSE3yCNLI" frameborder="0" allowfullscreen></iframe>
                    </div>
                 </div>
 
 
+                <!-- Footer -->
+                <div class="jumbotron" style=background-color:#ffff>
+                <footer class="w3-padding-64 w3-center w3-gray w3-xsmall" >
+                  <a href="https://www.facebook.com"><i class="fa fa-facebook-official"></i></a>
+                  <a href="https://www.pinterest.com"><i class="fa fa-pinterest-p"></i></a>
+                  <a href="https://twitter.com/share?url=?=?;hashtags=?"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.snapchat.com"><i class="fa fa-snapchat"></i></a>
+                  <a href="https://www.flickr.com"><i class="fa fa-flickr"></i></a>
+                  <a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a>
+                  <p class="w3-medium">
+                    Powered by <a href="https://www.holbertonschool.com" target="_blank">SyLoc</a>
+                  </p>
+                </footer>
+                </div>
 
 
 
